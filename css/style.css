@@ -298,7 +298,7 @@ footer:before {
 .social a i {
     display: block;
     width: fit-content;
-    margin: 0 auto;
+    margin: 20px auto 0;
     border: solid 1px var(--light_grey);
     padding: 20px;
     border-radius: 30px;
