@@ -308,8 +308,13 @@ footer:before {
     font-size: 20px;
 }
 
-.social a i:hover {
+.social a i.fa-linkedin-in:hover {
     background-color: #0a66c280;
+    transition: background-color 0.3s ease-in;
+}
+
+.social a i.fa-github:hover {
+    background-color: #062738;
     transition: background-color 0.3s ease-in;
 }
 
