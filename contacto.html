@@ -41,29 +41,29 @@
     </header>
     <main>
 
-        <div class="photo">
+        <figure class="photo">
             <div class="photo_img"></div>
-        </div>
+        </figure>
         <div class="content">
             <h1>Contacto</h1>
             <h2 class="subtitule">¡Hablemos!</h2>
             <div class="form">
                 <form action="#">
-                    <fieldset>
-                        <legend>Nombre<sup>*</sup></legend>
+                    <div class="form_div">
+                        <label for="name">Nombre<sup>*</sup></label>
                         <input type="text" id="name" name="name" placeholder="Nombre Apellido" required>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Email<sup>*</sup></legend>
+                    </div>
+                    <div class="form_div">
+                        <label for="email">Email<sup>*</sup></label>
                         <input type="text" id="email" name="email" placeholder="ejemplo@dominio.com" required>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Mensaje<sup>*</sup></legend>
+                    </div>
+                    <div class="form_div">
+                        <label for="message">Mensaje<sup>*</sup></label>
                         <textarea id="message" name="message" placeholder="Tu mensaje..." rows="7" required></textarea>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="form_div botton">
                         <input type="submit" id="send" name="send" value="Enviar mensaje">
-                    </fieldset>
+                    </div>
                 </form>
             </div>
             <div class="address">
