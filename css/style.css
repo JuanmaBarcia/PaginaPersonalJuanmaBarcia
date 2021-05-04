@@ -172,6 +172,7 @@ nav a:hover {
 
 .name_logo p {
     line-height: 1;
+    margin-bottom: unset;
 }
 
 .cv {
@@ -219,6 +220,10 @@ nav li:last-child {
 nav li a {
     display: block;
     padding: 26px 15px;
+}
+
+div#btn_mobile_menu {
+    display: none;
 }
 
 
@@ -326,7 +331,7 @@ footer:before {
 
 /* ===========================  INICIO  =========================== */
 
-#index .content {
+.content {
     width: 70%;
 }
 
@@ -346,7 +351,7 @@ footer:before {
 }
 
 #about .bars {
-    width: 43%;
+    width: 42%;
     float: left;
     margin: 0 1em;
 }
@@ -366,17 +371,16 @@ footer:before {
 #about .progress_bar>div {
     background: var(--third);
     padding: 5px 0px;
-    -webkit-animation: progress_bar 2s;
-    -moz-animation: progress_bar 2s;
+    animation: progress_bar 2s;
 }
 
-@-webkit-keyframes progress_bar {
+@keyframes progress_bar {
     0% {
         width: 0;
     }
 }
 
-@-moz-keyframes progress_bar {
+@keyframes progress_bar {
     0% {
         width: 0;
     }
@@ -384,6 +388,11 @@ footer:before {
 
 
 /* ===========================  PORTFOLIO  =========================== */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 #portfolio .grid_element {
     width: 47%;
@@ -457,10 +466,6 @@ footer:before {
 
 
 /* ===========================  CONTACTO  =========================== */
-
-#contact .content {
-    width: 100%;
-}
 
 #contact .form, #contact .address {
     width: 46%;
@@ -567,18 +572,84 @@ label {
     text-transform: uppercase;
 }
 
-
-/* ===========================  RESPONSIVE  =========================== */
-
-.close, .open, .mobile_menu {
+.oculto {
     display: none;
 }
 
-@media screen and (max-width:480px) {
+
+/* ===========================  RESPONSIVE  =========================== */
+
+#mobile_menu {
+    display: none;
+}
+
+
+/* ===========================  LAPTOP  =========================== */
+
+@media screen and (max-width:1260px) {
+    .content {
+        width: 100%;
+    }
+    nav {
+        font-size: 1.4vw;
+    }
+    .name_logo {
+        top: 35px;
+        left: 35px;
+        width: 18vw;
+    }
+    .navbar>img {
+        left: 20px;
+    }
+    .cv a {
+        padding: 22.5px;
+        top: 39px;
+        right: 14px;
+        font-size: 12px;
+    }
+    nav li {
+        margin: 0 5px;
+    }
+    nav li a {
+        padding: 30px 10px;
+    }
+    nav ul {
+        margin: 10px 0;
+    }
+    #about .bars {
+        margin: 0 0.5em;
+    }
+    #portfolio .grid_element {
+        width: unset;
+        float: left;
+        margin-bottom: unset;
+    }
+    #portfolio .grid_element:nth-child(odd) {
+        margin-right: unset;
+    }
+    #portfolio .grid_element:nth-child(even) {
+        margin-left: unset;
+    }
+    #contact .form, #contact .address {
+        width: 100%;
+        padding-right: unset;
+    }
+    #contact .content div.address {
+        padding-left: unset;
+    }
+}
+
+
+/* ===========================  TABLET  =========================== */
+
+@media screen and (max-width:768px) {
+    nav {
+        font-size: 2.5vw;
+    }
     .navbar {
         border-radius: 0;
         height: 90px;
-        width: 100%;
+        width: 100vw;
         margin: 0;
     }
     .navbar>.cv, .navbar>ul {
@@ -593,19 +664,22 @@ label {
     .open {
         display: block;
     }
-    .btn_mobile_menu {
+    div#btn_mobile_menu {
+        display: block;
+    }
+    #btn_mobile_menu {
         width: fit-content;
         float: right;
         position: relative;
         top: 14px;
         right: 20px;
     }
-    .btn_mobile_menu img {
+    #btn_mobile_menu img {
         width: 60px;
         height: 60px;
         cursor: pointer;
     }
-    .mobile_menu ul {
+    #mobile_menu ul {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -614,10 +688,13 @@ label {
         margin-top: 30px;
         box-shadow: 0px 0px 30px rgb(0 0 0 / 8%);
     }
-    .mobile_menu li {
+    #mobile_menu li {
         border-top: 1px solid var(--light_grey);
         width: 100%;
         margin: 0;
+    }
+    #mobile_menu.mobile, #btn_mobile_menu .mobile {
+        display: block;
     }
     main {
         position: relative;
@@ -640,29 +717,34 @@ label {
         height: unset;
     }
     .photo img {
-        width: 100%;
         visibility: unset;
+        object-fit: none;
     }
     .photo_img {
         display: none;
     }
-    #index .content {
-        width: unset;
-    }
     .content {
+        width: unset;
         margin-top: unset;
         padding: 30px;
         max-width: unset;
     }
+    .content_bars {
+        display: flex;
+        justify-content: center;
+    }
     footer {
         position: relative;
-        bottom: unset;
+        bottom: 0px;
         right: unset;
         width: unset;
         z-index: unset;
-        padding: 20px 0;
+        margin-top: 40px;
         border-top: 1px solid var(--light_grey);
-        border-bottom: 1px solid var(--light_grey);
+    }
+    .social a {
+        position: relative;
+        top: -30px;
     }
     .social {
         display: flex;
@@ -670,5 +752,39 @@ label {
     }
     .social a i {
         margin: 0;
+        background-color: var(--white);
+    }
+}
+
+
+/* ===========================  MOBILE  =========================== */
+
+@media screen and (max-width:480px) {
+    .name_logo {
+        width: 40vw;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .content_bars {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    #about .bars {
+        width: 100%;
+        float: unset;
+        margin: unset;
+    }
+    #portfolio .grid_element {
+        width: 100%;
+        float: unset;
+        margin-bottom: unset;
+    }
+    #portfolio .grid_element:nth-child(even) {
+        margin-left: unset;
+    }
+    .photo img {
+        height: unset;
+        object-fit: unset;
     }
 }
