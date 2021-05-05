@@ -132,42 +132,44 @@ nav {
     top: 0;
     z-index: 100;
     color: var(--primary);
+    display: flex;
+    align-items: center;
 }
 
 .navbar {
-    background-color: var(--white);
     border-radius: 45px;
     height: 90px;
     width: 95%;
     margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
     box-shadow: 0px 0px 30px rgb(0 0 0 / 8%);
-    ;
 }
 
-nav a:hover {
+.navbar>div {
+    display: flex;
+    align-items: center;
+}
+
+nav button:hover {
     transform: rotateX(360deg);
     transition: transform 0.8s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.navbar>img {
-    float: left;
+.navbar>div>img {
     width: 60px;
     height: 60px;
     position: relative;
-    top: 15px;
-    left: 40px;
+    left: 20px;
 }
 
 .name_logo {
-    width: 140px;
-    float: left;
     font-family: 'Ubuntu', sans-serif;
     position: relative;
-    top: 33px;
-    left: 60px;
+    left: 35px;
     font-size: 20px;
     font-weight: bold;
-    line-height: 1.2;
 }
 
 .name_logo p {
@@ -175,15 +177,10 @@ nav a:hover {
     margin-bottom: unset;
 }
 
-.cv {
-    float: right;
-}
-
 .cv a {
     border: solid var(--fourth) 1px;
     border-radius: 40px;
     padding: 26px;
-    top: 33px;
     right: 6px;
     vertical-align: middle;
     position: relative;
@@ -202,7 +199,7 @@ nav a:hover {
 
 nav ul {
     list-style-type: none;
-    margin: 9px 0;
+    margin: 5px 0;
     padding: 0;
     float: right;
 }
@@ -217,9 +214,15 @@ nav li:last-child {
     margin-right: 40px;
 }
 
-nav li a {
+nav li button {
     display: block;
     padding: 26px 15px;
+    border: none;
+    background-color: var(--white);
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary);
 }
 
 div#btn_mobile_menu {
@@ -250,7 +253,7 @@ main:before {
     z-index: 13;
 }
 
-.photo {
+#photo {
     position: fixed;
     top: 0;
     left: 0;
@@ -276,7 +279,7 @@ main:before {
     max-width: calc(100% - 100px);
 }
 
-.photo img {
+#photo img {
     width: 100%;
     visibility: hidden;
 }
@@ -327,13 +330,6 @@ footer:before {
 
 
 /* ===========================  ESTILOS DE CADA PÁGINA  =========================== */
-
-
-/* ===========================  INICIO  =========================== */
-
-.content {
-    width: 70%;
-}
 
 
 /* ===========================  SOBRE MI  =========================== */
@@ -473,12 +469,12 @@ footer:before {
     padding-right: 20px;
 }
 
-#contact .content div.address {
+#contact div.address {
     padding-left: 20px;
     padding-right: 0;
 }
 
-#contact .content .contact_data {
+#contact .contact_data {
     padding: 20px 30px;
     border: 1px solid var(--fourth);
     border-radius: 37px;
@@ -594,27 +590,31 @@ label {
         font-size: 1.4vw;
     }
     .name_logo {
-        top: 35px;
-        left: 35px;
-        width: 18vw;
-    }
-    .navbar>img {
-        left: 20px;
+        /* width: 18vw; */
     }
     .cv a {
         padding: 22.5px;
-        top: 39px;
         right: 14px;
         font-size: 12px;
     }
+    .menu_desk {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
     nav li {
         margin: 0 5px;
+        height: 75px;
+        display: flex;
+        align-items: center;
     }
-    nav li a {
-        padding: 30px 10px;
+    nav li button {
+        padding: 15px 10px;
+        font-size: 1.5vw;
     }
     nav ul {
-        margin: 10px 0;
+        display: flex;
+        align-items: center;
     }
     #about .bars {
         margin: 0 0.5em;
@@ -634,7 +634,7 @@ label {
         width: 100%;
         padding-right: unset;
     }
-    #contact .content div.address {
+    #contact div.address {
         padding-left: unset;
     }
 }
@@ -645,6 +645,8 @@ label {
 @media screen and (max-width:768px) {
     nav {
         font-size: 2.5vw;
+        background-color: var(--white);
+        box-shadow: 0px 0px 30px rgb(0 0 0 / 8%);
     }
     .navbar {
         border-radius: 0;
@@ -652,14 +654,14 @@ label {
         width: 100vw;
         margin: 0;
     }
-    .navbar>.cv, .navbar>ul {
+    .navbar>div>.cv, .menu_desk>ul {
         display: none;
     }
-    .navbar>img {
+    .navbar>div>img {
         left: 20px;
     }
     .name_logo {
-        left: 40px;
+        /* left: 40px; */
     }
     .open {
         display: block;
@@ -668,10 +670,7 @@ label {
         display: block;
     }
     #btn_mobile_menu {
-        width: fit-content;
-        float: right;
         position: relative;
-        top: 14px;
         right: 20px;
     }
     #btn_mobile_menu img {
@@ -692,9 +691,21 @@ label {
         border-top: 1px solid var(--light_grey);
         width: 100%;
         margin: 0;
+        justify-content: center;
+        font-size: 3vw;
+    }
+    nav li button {
+        font-size: 3vw;
+        width: inherit;
+        height: inherit;
     }
     #mobile_menu.mobile, #btn_mobile_menu .mobile {
         display: block;
+    }
+    #mobile_menu.mobile {
+        position: absolute;
+        top: 60px;
+        width: 100vw;
     }
     main {
         position: relative;
@@ -709,14 +720,14 @@ label {
     main:before {
         display: none;
     }
-    .photo {
+    #photo {
         position: unset;
         top: unset;
         left: unset;
         width: 100%;
         height: unset;
     }
-    .photo img {
+    #photo img {
         visibility: unset;
         object-fit: none;
     }
@@ -783,7 +794,7 @@ label {
     #portfolio .grid_element:nth-child(even) {
         margin-left: unset;
     }
-    .photo img {
+    #photo img {
         height: unset;
         object-fit: unset;
     }

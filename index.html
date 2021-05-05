@@ -15,63 +15,221 @@
     <header>
         <nav>
             <div class="navbar">
-                <img src="assets/logo.png" alt="logo">
-                <div class="name_logo">
-                    <p class="primary">Juanma Barcia</p>
+                <div>
+                    <img src="assets/logo.png" alt="logo">
+                    <div class="name_logo">
+                        <p class="primary">Juanma Barcia</p>
+                    </div>
                 </div>
-                <div class="cv">
-                    <a href="assets/Curriculum Juanma Barcia.pdf" target="_blank">Descargar CV</a>
+                <div>
+                    <div class="menu_desk">
+                        <ul>
+                            <li>
+                                <button id="inicio_btn" class="inicio">Inicio</button>
+                            </li>
+                            <li>
+                                <button id="sobre_mi_btn" class="about">Sobre mi</button>
+                            </li>
+                            <li>
+                                <button id="portfolio_btn" class="portfolio">Portfolio</button>
+                            </li>
+                            <li>
+                                <button id="contacto_btn" class="contact">Contacto</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cv">
+                        <a href="assets/Curriculum Juanma Barcia.pdf" target="_blank">Descargar CV</a>
+                    </div>
                 </div>
+            </div>
+            <div id="btn_mobile_menu">
+                <img id="open" src="assets/open.png" alt="Abrir menu movil">
+                <img id="close" class="oculto" src="assets/close.png" alt="Cerrar menu movil">
+            </div>
+            <div id="mobile_menu">
                 <ul>
                     <li>
-                        <a href="index.html">Inicio</a>
+                        <button id="inicio_mbl_btn" class="inicio">Inicio</button>
                     </li>
                     <li>
-                        <a href="sobre_mi.html">Sobre mi</a>
+                        <button id="sobre_mi_mbl_btn" class="about">Sobre mi</button>
                     </li>
                     <li>
-                        <a href="portfolio.html">Portfolio</a>
+                        <button id="portfolio_mbl_btn" class="portfolio">Portfolio</button>
                     </li>
                     <li>
-                        <a href="contacto.html">Contacto</a>
+                        <button id="contacto_mbl_btn" class="contact">Contacto</button>
+                    </li>
+                    <li>
+                        <a href="assets/Curriculum Juanma Barcia.pdf" target="_blank">Descargar CV</a>
                     </li>
                 </ul>
-                <div id="btn_mobile_menu">
-                    <img id="open" src="assets/open.png" alt="Abrir menu movil">
-                    <img id="close" class="oculto" src="assets/close.png" alt="Cerrar menu movil">
-                </div>
-                <div id="mobile_menu">
-                    <ul>
-                        <li>
-                            <a href="index.html">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="sobre_mi.html">Sobre mi</a>
-                        </li>
-                        <li>
-                            <a href="portfolio.html">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="contacto.html">Contacto</a>
-                        </li>
-                        <li>
-                            <a href="assets/Curriculum Juanma Barcia.pdf" target="_blank">Descargar CV</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </nav>
     </header>
     <main>
 
-        <figure class="photo">
-            <div class="photo_perfil"><img src="assets/IMG_1263.jpg" alt="Imagen del perfil"></div>
+        <figure id="photo">
+            <div id="foto_inicio" class="photo_perfil"><img src="assets/IMG_1263.jpg" alt="Imagen del perfil"></div>
             <div class="photo_img"></div>
         </figure>
         <div class="content">
-            <h1>Juanma Barcia</h1>
-            <h2 class="subtitule">Developer</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quos officia quod, optio aliquam atque nesciunt sequi consectetur dolorem nobis quaerat commodi accusamus perspiciatis recusandae excepturi nisi ullam earum praesentium.</p>
+            <div id="inicio">
+                <h1>Juanma Barcia</h1>
+                <h2 class="subtitule">Developer</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quos officia quod, optio aliquam atque nesciunt sequi consectetur dolorem nobis quaerat commodi accusamus perspiciatis recusandae excepturi nisi ullam earum praesentium.</p>
+            </div>
+            <div id="about" class="oculto">
+                <h1>Sobre mi</h1>
+                <h2 class="subtitule">Quién soy</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati voluptatem, accusamus numquam corporis id repudiandae quasi incidunt quis aliquam dolor aliquid impedit perspiciatis delectus distinctio earum tenetur enim a!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ab enim omnis non, ducimus fugit tenetur consectetur, tempore nemo minus sed repellat id et corporis quidem quo dicta repellendus facilis!
+                </p>
+                <div class="content_bars">
+                    <div class="bars">
+                        <div>
+                            <h3>HTML</h3>
+                            <div class="progress_bar">
+                                <div style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>JavaScript</h3>
+                            <div class="progress_bar">
+                                <div style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>SQL</h3>
+                            <div class="progress_bar">
+                                <div style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bars">
+                        <div>
+                            <h3>CSS</h3>
+                            <div class="progress_bar">
+                                <div style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>PHP</h3>
+                            <div class="progress_bar">
+                                <div style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Laravel</h3>
+                            <div class="progress_bar">
+                                <div style="width: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="portfolio" class="oculto">
+                <h1>Portfolio</h1>
+                <h2 class="subtitule">Algunos de mis trabajos...</h2>
+                <div class="grid">
+                    <article class="grid_element">
+                        <div class="element">
+                            <figure class="figure figure1">
+                                <a target="_blank" href="https://cadarma.es/"><img src="assets/grid_element.png" alt="Web Cadarma"></a>
+                            </figure>
+                        </div>
+                        <h3><a target="_blank" href="https://cadarma.es/">Cadarma</a></h3>
+                    </article>
+                    <article class="grid_element">
+                        <div class="element">
+                            <figure class="figure figure2">
+                                <a target="_blank" href="https://www.casascevisa.com/"><img src="assets/grid_element.png" alt="Web Cevisa"></a>
+                            </figure>
+                        </div>
+                        <h3><a target="_blank" href="https://www.casascevisa.com/">Cevisa</a></h3>
+                    </article>
+                    <article class="grid_element">
+                        <div class="element">
+                            <figure class="figure figure3">
+                                <a target="_blank" href="https://endovations.es/"><img src="assets/grid_element.png" alt="Web Endovations"></a>
+                            </figure>
+                        </div>
+                        <h3><a target="_blank" href="https://endovations.es/">Endovations</a></h3>
+                    </article>
+                    <article class="grid_element">
+                        <div class="element">
+                            <figure class="figure figure4">
+                                <a target="_blank" href="https://inffusions.com/"><img src="assets/grid_element.png" alt="Web Inffusions"></a>
+                            </figure>
+                        </div>
+                        <h3><a target="_blank" href="https://inffusions.com/">Inffusions</a></h3>
+                    </article>
+                    <article class="grid_element">
+                        <div class="element">
+                            <figure class="figure figure5">
+                                <a target="_blank" href="http://osjuan.com/"><img src="assets/grid_element.png" alt="Web Osjuan"></a>
+                            </figure>
+                        </div>
+                        <h3><a target="_blank" href="http://osjuan.com/">Osjuan</a></h3>
+                    </article>
+                </div>
+            </div>
+            <div id="contact" class="oculto">
+                <h1>Contacto</h1>
+                <h2 class="subtitule">¡Hablemos!</h2>
+                <div class="form">
+                    <form action="#">
+                        <div class="form_div">
+                            <label for="name">Nombre<sup>*</sup></label>
+                            <input type="text" id="name" name="name" placeholder="Nombre Apellido" required>
+                        </div>
+                        <div class="form_div">
+                            <label for="email">Email<sup>*</sup></label>
+                            <input type="text" id="email" name="email" placeholder="ejemplo@dominio.com" required>
+                        </div>
+                        <div class="form_div">
+                            <label for="message">Mensaje<sup>*</sup></label>
+                            <textarea id="message" name="message" placeholder="Tu mensaje..." rows="7" required></textarea>
+                        </div>
+                        <div class="form_div botton">
+                            <input type="submit" id="send" name="send" value="Enviar mensaje">
+                        </div>
+                    </form>
+                </div>
+                <div class="address">
+                    <div class="contact_data">
+                        <h3>Juanma Barcia</h3>
+                        <h4>Developer</h4>
+                        <ul>
+                            <li>
+                                <strong>
+                                    <span> Ciudad: </span>
+                                </strong>
+                                <span> Gijón </span>
+                            </li>
+                            <li>
+                                <strong>
+                                    <span> Provincia: </span>
+                                </strong>
+                                <span> Asturias </span>
+                            </li>
+                            <li>
+                                <strong>
+                                    <span> Teléfono: </span>
+                                </strong>
+                                <span> 123456789 </span>
+                            </li>
+                            <li>
+                                <strong>
+                                    <span> Email: </span>
+                                </strong>
+                                <span> mail@mail.com </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
